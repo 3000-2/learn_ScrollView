@@ -10,11 +10,12 @@ class SingleChildScreenViewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MainLayout(
-        title: 'SingleChildScrollView', body: renderMany() // renderSimple()
-        // renderAlwaysScroll()
-        // renderClip()
-        // renderPhysics()
-        );
+        title: 'SingleChildScrollView', body: renderAlwaysScroll()
+      // renderMany() // renderSimple()
+      // renderAlwaysScroll()
+      // renderClip()
+      // renderPhysics()
+    );
   }
 
   /*
@@ -83,7 +84,8 @@ class SingleChildScreenViewScreen extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: numbers
-            .map((number) => renderContainer(
+            .map((number) =>
+            renderContainer(
                 color: rainbowColors[number % rainbowColors.length],
                 index: number))
             .toList(),
