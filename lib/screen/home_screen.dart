@@ -3,7 +3,9 @@ import 'package:scrollable_widget/layout/main_layout.dart';
 import 'package:scrollable_widget/screen/custom_scroll_view_screen.dart';
 import 'package:scrollable_widget/screen/grid_view_screen.dart';
 import 'package:scrollable_widget/screen/list_view.dart';
+import 'package:scrollable_widget/screen/refresh_indicator_screen.dart';
 import 'package:scrollable_widget/screen/reorderable_list_view_screen.dart';
+import 'package:scrollable_widget/screen/scrollbar_screen.dart';
 import 'package:scrollable_widget/screen/single_child_scroll_view_screen.dart';
 
 class ScreenModel {
@@ -24,7 +26,10 @@ class HomeScreen extends StatelessWidget {
         builder: (_) => ReorderableListViewScreen(),
         name: 'ReorderableListView'),
     ScreenModel(
-        builder: (_) => CustomScrollViewScreen(), name: 'CustomScrollView')
+        builder: (_) => CustomScrollViewScreen(), name: 'CustomScrollView'),
+    ScreenModel(builder: (_) => ScrollbarScreen(), name: 'Scrollbar'),
+    ScreenModel(
+        builder: (_) => RefreshIndicatorScreen(), name: 'RefreshIndicator')
   ];
 
   HomeScreen({Key? key}) : super(key: key);
